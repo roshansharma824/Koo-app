@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginHorizontal="12dp"
+                android:id="@+id/title"
+                android:maxLines="2"
+                android:gravity="center"
+                tools:text="Beatus coniecto corroboro apostolus avaritia barba clibanus consequuntur totus."
+                android:textSize="14sp"
+                android:ellipsize="end"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/subTitle"
+                android:textSize="10sp"
+                android:layout_marginTop="12dp"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:paddingHorizontal="12dp"
+                tools:text="atena cometes voluptas. Acerbitas amplitudo adaugeo. Stillicidium casus sint. Demoror quas theatrum. Subnecto corrigo vir. Tergo substantia vita."
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                android:layout_height="wrap_content"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</layout>
