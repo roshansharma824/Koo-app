@@ -3,6 +3,7 @@ package com.example.kooapp.di
 import com.example.kooapp.repository.MainHttpInterface
 import com.example.kooapp.repository.MainRepository
 import com.example.kooapp.repository.MainRepositoryImpl
+import com.example.kooapp.repository.PostDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,7 +23,7 @@ object RepoModule {
 
     @Singleton
     @Provides
-    fun provideMainRepositoryImpl(mainHttpInterface: MainHttpInterface): MainRepository {
-        return MainRepositoryImpl(mainHttpInterface = mainHttpInterface)
+    fun provideMainRepositoryImpl(mainHttpInterface: MainHttpInterface, postDao: PostDao): MainRepository {
+        return MainRepositoryImpl(mainHttpInterface = mainHttpInterface,postDao)
     }
 }

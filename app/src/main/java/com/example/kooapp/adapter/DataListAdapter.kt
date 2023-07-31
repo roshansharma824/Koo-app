@@ -8,18 +8,18 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.example.kooapp.R
 import com.example.kooapp.databinding.ItemLayoutBinding
-import com.example.kooapp.pojo.Posts
+import com.example.kooapp.pojo.PostItem
 import java.util.*
 
 class DataListAdapter(
-    private val data: ArrayList<Posts>,
+    private val data: ArrayList<PostItem>,
 ) : RecyclerView.Adapter<DataListAdapter.DataViewHolder>() {
 
 
     class DataViewHolder(itemView: ViewBinding) :
         RecyclerView.ViewHolder(itemView.root) {
         private val binding: ItemLayoutBinding
-        fun onBind(data: Posts) {
+        fun onBind(data: PostItem) {
             binding.title.text = data.title
             binding.subTitle.text = data.body
         }
@@ -47,7 +47,7 @@ class DataListAdapter(
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) =
         holder.onBind(data[position])
 
-    fun addData(list: List<Posts>) {
+    fun addData(list: List<PostItem>) {
         data.addAll(list)
     }
 

@@ -1,7 +1,14 @@
 package com.example.kooapp.repository
 
-import com.example.kooapp.pojo.DataList
+import androidx.lifecycle.LiveData
+import com.example.kooapp.pojo.PostItem
+
+
 
 interface MainRepository {
-    suspend fun getDataList(): DataList
+    suspend fun getDataList(): List<PostItem>
+
+    suspend fun getAllPosts(): List<PostItem>
+
+
 }

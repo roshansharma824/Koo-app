@@ -1,11 +1,18 @@
 package com.example.kooapp.repository
 
-import com.example.kooapp.pojo.DataList
+
+import androidx.lifecycle.LiveData
+import com.example.kooapp.pojo.PostItem
 
 
-class MainRepositoryImpl(private val mainHttpInterface: MainHttpInterface) : MainRepository {
-    override suspend fun getDataList(): DataList {
+
+class MainRepositoryImpl(private val mainHttpInterface: MainHttpInterface, private val postDao: PostDao) : MainRepository {
+    override suspend fun getDataList(): List<PostItem> {
         return mainHttpInterface.getDataList()
+    }
+
+    override suspend fun getAllPosts(): List<PostItem> {
+        return postDao.getAllPosts()
     }
 
 

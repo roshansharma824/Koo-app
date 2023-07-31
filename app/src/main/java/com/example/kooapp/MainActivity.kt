@@ -9,7 +9,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kooapp.adapter.DataListAdapter
 import com.example.kooapp.databinding.ActivityMainBinding
-import com.example.kooapp.pojo.DataList
+import com.example.kooapp.pojo.PostItem
+
 import com.example.kooapp.pojo.Status
 import com.example.kooapp.viewModel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -59,8 +60,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun renderList(dataList: DataList) {
-        adapter.addData(dataList.data)
+    private fun renderList(dataList: List<PostItem>) {
+        adapter.addData(dataList)
         adapter.notifyDataSetChanged()
     }
 }
